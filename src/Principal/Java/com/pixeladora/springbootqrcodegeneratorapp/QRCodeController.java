@@ -29,7 +29,7 @@ public class QRCodeController {
             @PathVariable("width") Integer width,
             @PathVariable("height") Integer height)
             throws Exception {
-        QRCodeGenerator.generateQRCodeImage(SILVER_IMAGE_PATH, width, height, QR_CODE_IMAGE_PATH);
+        QRCodeGenerator.generateQRCodeImage("./src/main/resources/QRCode.png", width, height, QR_CODE_IMAGE_PATH);
     }
 
     @GetMapping(value = "/genrateQRCode/{codeText}/{width}/{height}")
